@@ -36,7 +36,7 @@ const addon = ace(app);
 
 // See config.json
 const port = addon.config.port();
-app.set('port', port);
+app.set('port', process.env.PORT|| port);
 
 // Log requests, using an appropriate formatter by env
 const devEnv = app.get('env') === 'development';
@@ -89,7 +89,7 @@ if (devEnv) app.use(errorHandler());
 routes(app, addon);
 
 // Boot the HTTP server
-http.createServer(app).listen(port, () => {
+http.createServer(app).listen(process.env.PORT || port, () => {
   console.log('App server running at http://' + os.hostname() + ':' + port);
 
   // Enables auto registration/de-registration of app into a host in dev mode
