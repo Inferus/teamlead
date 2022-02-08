@@ -48,7 +48,7 @@ export default function routes(app, addon) {
 app.post('/installed', (req, res) => {
   // Rendering a template is easy; the render method takes two params: the name of the component or template file, and its props.
   // Handlebars and jsx are both supported, but please note that jsx changes require `npm run watch-jsx` in order to be picked up by the server.
-  res.status(200)
+  res.status(200).json({message: "succcess"})
 });
 
     // Add additional route handlers here...
