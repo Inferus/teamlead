@@ -6,6 +6,9 @@
     "authentication": {
         "type": "jwt"
     },
+    "lifecycle": {
+        "installed": "/installed"
+    },
     "scopes": [
         "READ"
     ],
