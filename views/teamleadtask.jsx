@@ -1,7 +1,7 @@
 import React from 'react';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
 import Spinner from '@atlaskit/spinner';
-export default function HelloWorld() {
+export default function TeamleadTask() {
  
 
   return ( <Page testId="page">

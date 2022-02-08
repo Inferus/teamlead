@@ -1,6 +1,6 @@
 {
-    "key": "my-app",
-    "name": "My app",
+    "key": "Teamlead",
+    "name": "Teamlead Task",
     "description": "Teamlead Task",
     "baseUrl": "{{localBaseUrl}}",
     "authentication": {
@@ -15,30 +15,54 @@
     "apiMigrations":{
         "signed-install": true
     },
-    "modules": {
-        "generalPages": [
+        "modules": {
+          "webSections": [
             {
-                "key": "hello-world-page-jira",
-                "location": "system.top.navigation.bar",
-                "name": {
-                    "value": "Teamlead Task"
-                },
-                "url": "/hello-world",
-                "conditions": [{
-                    "condition": "user_is_logged_in"
-                }]
-            },
-            {
-                "key": "hello-world-page-confluence",
-                "location": "system.header/left",
-                "name": {
-                    "value": "Hello World"
-                },
-                "url": "/hello-world",
-                "conditions": [{
-                    "condition": "user_is_logged_in"
-                }]
+              "location": "admin_plugins_menu",
+              "weight": 50,
+              "name": {
+                "value": "Teamlead Task"
+              },
+              "key": "my-web-section"
             }
-        ]
-    }
+          ],
+
+          "generalPages": [
+           
+            {
+                "url": "/settings",
+                "location":"admin_plugins_menu/my-web-section",
+              
+                "name": {
+                  "value": "Settings"
+                },
+                "key": "settings"
+              },
+              {
+                "url": "/teamleadtask",
+              
+                "name": {
+                  "value": "Teamlead Task"
+                },
+                "key": "teamleadtask"
+              }
+          ],
+          "webPanels": [
+            {
+              "url": "/web-panel",
+              "location": "atl.jira.view.issue.right.context",
+              "layout": {
+                "width": "10px",
+                "height": "100%"
+              },
+              "weight": 50,
+              "supportsNative": false,
+              "name": {
+                "value": "Teamlead task"
+              },
+              "key": "my-web-panel"
+            }
+          ]
+        }
+      
 }
