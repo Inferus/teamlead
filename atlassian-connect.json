@@ -3,7 +3,12 @@
     "name": "Teamlead Task",
     "description": "Teamlead Task",
     "baseUrl": "{{localBaseUrl}}",
-   
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
     "scopes": [
         "READ"
     ],
