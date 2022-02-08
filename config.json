@@ -73,7 +73,8 @@
             "*.jira-dev.com",
             "*.atlassian.net",
             "*.atlassian.com",
-            "*.jira.com"
+            "*.jira.com",
+            "*.herokuapp.com"
         ]
     },
     "product": "jira"
